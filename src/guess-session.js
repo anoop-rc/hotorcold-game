@@ -4,7 +4,7 @@ import GuessForm from './guess-form'
 
 const GuessSection = ({ feedback, guessCount, onMakeGuess }) => {
     return (
-        <section>
+        <section className="new-game-container">
             <Feedback feedback={feedback} guessCount={guessCount} />
             <GuessForm onMakeGuess={onMakeGuess} />
         </section>

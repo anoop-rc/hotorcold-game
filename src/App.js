@@ -41,9 +41,9 @@ function App() {
   const guessCount = guesses.length;
 
   return (
-    <div className="App">
+    <div className="app">
       <Header onRestartGame={() => restartGame} />
-      <main role='main'>
+      <main role='main' className="body">
         <GuessSection 
           feedback={feedback} 
           guessCount={guessCount} 

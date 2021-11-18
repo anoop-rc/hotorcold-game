@@ -1,21 +1,22 @@
 * {
-  padding: 0px;
-  margin: 0px;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: 'Raleway', arial, sans-serif;
-	font-style: 800;
-	background-color: #5AC6FF;
-	color: #ffffff;
-	text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
 }
 
-h1 {
-	font-size: 3.5em;
+.float-right {
+  float: right;
 }
 
-p {
-	font-size: 1.5em;
-	line-height: 1.5em;
+.float-left {
+  float: left;
+}
+
+.clear-left {
+  clear: left;
 }
