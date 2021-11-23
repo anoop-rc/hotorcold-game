@@ -7,7 +7,7 @@ const Header = ({onRestartGame}) => {
 
     return (
         <header className="header">
-            <TopNav onRestartGame={() => onRestartGame} />
+            <TopNav onRestartGame={() => onRestartGame()} />
             <h1 className="title">HOT or COLD</h1>
         </header>
     )

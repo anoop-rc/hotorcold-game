@@ -3,6 +3,7 @@ import './App.css';
 import Feedback from './feedback';
 import GuessSection from './guess-session';
 import Header from './header';
+import StatusSection from './status-section';
 
 function App() {
   const [guesses, setGuesses] = useState([]);
@@ -32,9 +33,10 @@ function App() {
     } else if (difference >= 1) {
       localFeedback = "You're HOT!!"
     } else {
-      localFeedback = "You guessed the correct answer!!"
+      localFeedback = "You guessed the CORRECT ANSWER!!"
     }
-    setGuesses([...guesses], guess);
+    console.log(guesses);
+    setGuesses([...guesses, guess]);
     setFeedback(localFeedback);
   }
 
@@ -42,13 +44,14 @@ function App() {
 
   return (
     <div className="app">
-      <Header onRestartGame={() => restartGame} />
+      <Header onRestartGame={restartGame} />
       <main role='main' className="body">
         <GuessSection 
           feedback={feedback} 
           guessCount={guessCount} 
           onMakeGuess={makeGuess}
         />
+        <StatusSection guesses={guesses} />
       </main>
     </div>
   );
